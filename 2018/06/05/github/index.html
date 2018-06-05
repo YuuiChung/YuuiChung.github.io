@@ -94,16 +94,17 @@
 
 
 
-<meta name="description" content="Persistence, Confidence, Patience">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YuuiChung&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="github是一个基于git的代码托管平台，付费用户可以建私人仓库，我们一般的免费用户只能使用公共仓库，也就是代码要公开。这对于一般人来说公共仓库就已经足够了。 图片 注册账户以及创建仓库要想使用github第一步当然是注册github账号了。之后就可以创建仓库了（免费用户只能建公共仓库），Create a New Repository，填好名称后Create，之后会出现一些仓库的配置信息，这也是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Git上传项目代码到github（一）">
+<meta property="og:url" content="http://yoursite.com/2018/06/05/github/index.html">
 <meta property="og:site_name" content="YuuiChung&#39;s Blog">
-<meta property="og:description" content="Persistence, Confidence, Patience">
+<meta property="og:description" content="github是一个基于git的代码托管平台，付费用户可以建私人仓库，我们一般的免费用户只能使用公共仓库，也就是代码要公开。这对于一般人来说公共仓库就已经足够了。 图片 注册账户以及创建仓库要想使用github第一步当然是注册github账号了。之后就可以创建仓库了（免费用户只能建公共仓库），Create a New Repository，填好名称后Create，之后会出现一些仓库的配置信息，这也是">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-05T09:23:07.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YuuiChung&#39;s Blog">
-<meta name="twitter:description" content="Persistence, Confidence, Patience">
+<meta name="twitter:title" content="使用Git上传项目代码到github（一）">
+<meta name="twitter:description" content="github是一个基于git的代码托管平台，付费用户可以建私人仓库，我们一般的免费用户只能使用公共仓库，也就是代码要公开。这对于一般人来说公共仓库就已经足够了。 图片 注册账户以及创建仓库要想使用github第一步当然是注册github账号了。之后就可以创建仓库了（免费用户只能建公共仓库），Create a New Repository，填好名称后Create，之后会出现一些仓库的配置信息，这也是">
 
 
 
@@ -133,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/05/github/"/>
 
 
 
 
 
-  <title>YuuiChung's Blog</title>
+  <title>使用Git上传项目代码到github（一） | YuuiChung's Blog</title>
   
 
 
@@ -158,8 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
 <a href="https://github.com/YuuiChung">
@@ -266,9 +266,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -298,9 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/05/github/" itemprop="url">使用Git上传项目代码到github（一）</a></h1>
+          <h1 class="post-title" itemprop="name headline">使用Git上传项目代码到github（一）</h1>
         
 
         <div class="post-meta">
@@ -361,9 +359,7 @@
       
 
       
-        
-          
-            <p>github是一个基于git的代码托管平台，付费用户可以建私人仓库，我们一般的免费用户只能使用公共仓库，也就是代码要公开。这对于一般人来说公共仓库就已经足够了。</p>
+        <p>github是一个基于git的代码托管平台，付费用户可以建私人仓库，我们一般的免费用户只能使用公共仓库，也就是代码要公开。这对于一般人来说公共仓库就已经足够了。</p>
 <p>图片</p>
 <h2 id="注册账户以及创建仓库"><a href="#注册账户以及创建仓库" class="headerlink" title="注册账户以及创建仓库"></a>注册账户以及创建仓库</h2><p>要想使用github第一步当然是注册github账号了。之后就可以创建仓库了（免费用户只能建公共仓库），Create a New Repository，填好名称后Create，之后会出现一些仓库的配置信息，这也是一个git的简单教程。步骤如下：</p>
 <p>打开<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a> 直接在首页上注册</p>
@@ -582,8 +578,6 @@ git branch --<span class="built_in">set</span>-upstream develop origin/develop
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://1ke.co/course/194" target="_blank" rel="noopener">http://1ke.co/course/194</a></p>
 <h2 id="另附："><a href="#另附：" class="headerlink" title="另附："></a>另附：</h2><p> 解决  在使用git 对源代码进行push到gitHub时可能会出错，error: failed to push some refs to git。<br>出现错误的主要原因是github中的README.md文件不在本地代码目录中<br>可以通过如下命令进行github与本地代码合并:  git pull –rebase origin master<br>重新执行之前的git push 命令，成功！</p>
 
-          
-        
       
     </div>
     
@@ -600,148 +594,28 @@ git branch --<span class="built_in">set</span>-upstream develop origin/develop
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/04/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="YuuiChung's Blog">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuuiChung's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/04/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-04T19:55:23+08:00">
-                2018-06-04
-              </time>
+              <a href="/2018/06/04/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/06/04/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/04/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -751,10 +625,11 @@ git branch --<span class="built_in">set</span>-upstream develop origin/develop
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -762,6 +637,10 @@ git branch --<span class="built_in">set</span>-upstream develop origin/develop
 
 
           
+
+  
+
+
 
         </div>
         
@@ -782,8 +661,17 @@ git branch --<span class="built_in">set</span>-upstream develop origin/develop
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -844,6 +732,22 @@ git branch --<span class="built_in">set</span>-upstream develop origin/develop
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册账户以及创建仓库"><span class="nav-number">1.</span> <span class="nav-text">注册账户以及创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git客户端"><span class="nav-number">2.</span> <span class="nav-text">安装git客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置Git"><span class="nav-number">2.0.1.</span> <span class="nav-text">配置Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交上传"><span class="nav-number">2.0.2.</span> <span class="nav-text">提交上传</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gitignore文件"><span class="nav-number">2.0.3.</span> <span class="nav-text">gitignore文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git命令"><span class="nav-number">3.</span> <span class="nav-text">Git命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">3.0.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#另附："><span class="nav-number">4.</span> <span class="nav-text">另附：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -978,6 +882,10 @@ git branch --<span class="built_in">set</span>-upstream develop origin/develop
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
