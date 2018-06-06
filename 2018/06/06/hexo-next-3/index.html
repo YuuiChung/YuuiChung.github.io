@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*��������ɫ*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*��Ӱ��ɫ*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*�ϱ߿���ɫ*/
+        border-left-color: #1E92FB;    /*��߿���ɫ*/
+    }
+</style>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="github,hexo," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="前言前面的文章已经能让大家搭建起自己的博客，并通过网络访问了，通过基础的发布文章和编辑既可以实现博客的运作了，其他的一些包括分页和标签、分类等都不用自己来操作实现，只要通过命令hexo g就可以了，如果大家看过了next主题的官网中介绍的配置，我会帮助大家对其中描述不清的地方进行讲解。 理解文章和页面当你前面的做好了后，现在还需要建立三个页面：分类页categories、标签页tags、关于页ab">
+<meta name="keywords" content="github,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo+Github搭建属于自己的博客（Next主题自定义配置）">
+<meta property="og:url" content="http://yoursite.com/2018/06/06/hexo-next-3/index.html">
+<meta property="og:site_name" content="YuuiChung&#39;s Blog">
+<meta property="og:description" content="前言前面的文章已经能让大家搭建起自己的博客，并通过网络访问了，通过基础的发布文章和编辑既可以实现博客的运作了，其他的一些包括分页和标签、分类等都不用自己来操作实现，只要通过命令hexo g就可以了，如果大家看过了next主题的官网中介绍的配置，我会帮助大家对其中描述不清的地方进行讲解。 理解文章和页面当你前面的做好了后，现在还需要建立三个页面：分类页categories、标签页tags、关于页ab">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-06T13:29:55.614Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Hexo+Github搭建属于自己的博客（Next主题自定义配置）">
+<meta name="twitter:description" content="前言前面的文章已经能让大家搭建起自己的博客，并通过网络访问了，通过基础的发布文章和编辑既可以实现博客的运作了，其他的一些包括分页和标签、分类等都不用自己来操作实现，只要通过命令hexo g就可以了，如果大家看过了next主题的官网中介绍的配置，我会帮助大家对其中描述不清的地方进行讲解。 理解文章和页面当你前面的做好了后，现在还需要建立三个页面：分类页categories、标签页tags、关于页ab">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/06/hexo-next-3/"/>
+
+
+
+
+
+  <title>使用Hexo+Github搭建属于自己的博客（Next主题自定义配置） | YuuiChung's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+<a href="https://github.com/YuuiChung">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+</a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">YuuiChung's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">知耻而后勇，知耻而后勤</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/06/hexo-next-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YuuiChung's Blog">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuuiChung's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用Hexo+Github搭建属于自己的博客（Next主题自定义配置）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-06T20:54:58+08:00">
+                2018-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/github/" itemprop="url" rel="index">
+                    <span itemprop="name">github</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/06/06/hexo-next-3/" class="leancloud_visitors" data-flag-title="使用Hexo+Github搭建属于自己的博客（Next主题自定义配置）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前面的文章已经能让大家搭建起自己的博客，并通过网络访问了，通过基础的发布文章和编辑既可以实现博客的运作了，其他的一些包括分页和标签、分类等都不用自己来操作实现，只要通过命令hexo g就可以了，如果大家看过了next主题的官网中介绍的配置，我会帮助大家对其中描述不清的地方进行讲解。</p>
+<h2 id="理解文章和页面"><a href="#理解文章和页面" class="headerlink" title="理解文章和页面"></a>理解文章和页面</h2><p>当你前面的做好了后，现在还需要建立三个页面：分类页categories、标签页tags、关于页about,以及一个html页面放到根目录source下，才能完善博客基本的内容。<br>在根目录配置文件中有一个设置希望设置为true<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Writing</span></span><br><span class="line">new_post_name: :title.md <span class="comment"># File name of new posts</span></span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></span><br><span class="line">external_link: <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: <span class="literal">false</span></span><br><span class="line">post_asset_folder: <span class="literal">true</span>  <span class="comment">##就是这个</span></span><br></pre></td></tr></table></figure></p>
+<p>原因是设置后当你新建一个页面后自动生成一个同名文件夹方便管理。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories </span><br><span class="line">hexo new page tags</span><br><span class="line">hexo new page about</span><br></pre></td></tr></table></figure></p>
+<p>tags里index.md设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2017-03-01 19:31:10</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"tags"</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>categories里index.md设置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2017-03-01 19:42:08</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>主题目录下的配置文件设置如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories</span><br><span class="line">  about: /about</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  commonweal: /404.html</span><br></pre></td></tr></table></figure></p>
+<p>一个文章应该包含以下属性在顶部<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">date: 2017-03-07</span><br><span class="line">title: xxxxxxxxx</span><br><span class="line">tags: xxxx  <span class="comment">#如果不想加入标签可以为空</span></span><br><span class="line">categories: xxxxx <span class="comment">#如果不想加入分类可以为空</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="文章阅读次数的统计深入讲解"><a href="#文章阅读次数的统计深入讲解" class="headerlink" title="文章阅读次数的统计深入讲解"></a>文章阅读次数的统计深入讲解</h2><p>我这里面的阅读次数是通过leanCloud,来实现文章阅读量统计的，next主题还自带了一个不蒜子的统计参数配置，相信大家用过了，在主题的配置文件里有如下代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show PV/UV of the website/page with busuanzi.</span></span><br><span class="line"><span class="comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span></span><br><span class="line">busuanzi_count:</span><br><span class="line">  <span class="comment"># count values only if the other configs are false</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># custom uv span for the whole site</span></span><br><span class="line">  site_uv: <span class="literal">true</span></span><br><span class="line">  site_uv_header: &lt;i class=<span class="string">"fa fa-user"</span>&gt;&lt;/i&gt; 访问用户：</span><br><span class="line">  site_uv_footer: 人</span><br><span class="line">  <span class="comment"># custom pv span for the whole site</span></span><br><span class="line">  site_pv: <span class="literal">true</span></span><br><span class="line">  site_pv_header: &lt;i class=<span class="string">"fa fa-eye"</span>&gt;&lt;/i&gt; 访问次数：</span><br><span class="line">  site_pv_footer: 次</span><br><span class="line">  <span class="comment"># custom pv span for one page only</span></span><br><span class="line">  page_pv: <span class="literal">false</span></span><br><span class="line">  page_pv_header: &lt;i class=<span class="string">"fa fa-file-o"</span>&gt;&lt;/i&gt;&amp;nbsp点击量 </span><br><span class="line">  page_pv_footer: 次</span><br></pre></td></tr></table></figure></p>
+<p>我设置page_pv为false因为我打算用leanCloud来实现,因为用不蒜子这个来统计是没问题，但是它说了 # custom pv span for one page only意思是只显示在文章相应这里，你在首页是看不到阅读次数统计的，对用户体验来说十分不好，所以打算用leanCloud，如果觉得首页不展示阅读次数什么的无所谓的，就可以用next主题的不蒜子插件，具体的查看官方文档上面有写方法。<br>这里讲下官方文档上没有详细说明的leanCloud,来实现文章阅读量统计的方法</p>
+<h3 id="leanCloud来实现阅读统计"><a href="#leanCloud来实现阅读统计" class="headerlink" title="leanCloud来实现阅读统计"></a>leanCloud来实现阅读统计</h3><p>我现在版本的next主题是集成了这个插件的.<br>过程是：<br>1.注册leancloud账户并完成验证后登录leanCloud的，创建应用并配置相关操作<br>2.获取对应的AppID和AppKey<br>3.配置相应参数完成阅读文章的数量的统计</p>
+<h4 id="创建一个应用"><a href="#创建一个应用" class="headerlink" title="创建一个应用"></a>创建一个应用</h4><p>图片<br>进入应用创建Class<br>图片<br>我之前已经创建好了一个Class名为Counter,创建成功就会出来了。</p>
+<h4 id="获取AppID和AppKey"><a href="#获取AppID和AppKey" class="headerlink" title="获取AppID和AppKey"></a>获取AppID和AppKey</h4><p>图片</p>
+<h4 id="设置主题配置文件"><a href="#设置主题配置文件" class="headerlink" title="设置主题配置文件"></a>设置主题配置文件</h4><p>设置主题配置文件_config.yml相关字段，实现阅读数量的统计<br>添加以下字段<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Show number of visitors to each article.</span></span><br><span class="line"><span class="comment"># You can visit https://leancloud.cn get AppID and AppKey.</span></span><br><span class="line">leancloud_visitors:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  app_id: <span class="comment">#你的App ID</span></span><br><span class="line">  app_key: <span class="comment">#你的的App Key</span></span><br></pre></td></tr></table></figure></p>
+<p>完成配置并重新编译。<br>通过在本地服务器测试是看不到阅读次数的统计的，所以要发布到网上查看才行。</p>
+<h2 id="酷炫的博客背景"><a href="#酷炫的博客背景" class="headerlink" title="酷炫的博客背景"></a>酷炫的博客背景</h2><p>背景的几何线条是采用的nest效果，一个基于html5<br>canvas绘制的网页背景效果，非常赞！来自github的开源项目canvas-nest 特性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">不依赖任何框架或者内库，比如不依赖jQuery，使用原生的javascript。</span><br><span class="line">非常小，只有1.66kb，如果开启gzip，可以更小。</span><br><span class="line">非常容易实现，配置简单，即使你不是web开发者，也能简单搞定。</span><br></pre></td></tr></table></figure></p>
+<p>使用非常简单，打开next/_config.yml，添加以下代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Canvas-nest</span></span><br><span class="line">canvas_nest: <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>完成<br>重新编译配置后，在本地测试就能看到效果了。</p>
+<h2 id="添加Fork-me-on-GitHub"><a href="#添加Fork-me-on-GitHub" class="headerlink" title="添加Fork me on GitHub"></a>添加Fork me on GitHub</h2><p>去网址<a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="noopener">https://github.com/blog/273-github-ribbons</a> 挑选自己喜欢的样式，并复制代码，添加到themes\next\layout_layout.swig的body标签之内即可<br>记得把里面的url换成自己的!</p>
+<h2 id="把侧边栏头像变成圆形，并且鼠标停留在上面发生旋转效果"><a href="#把侧边栏头像变成圆形，并且鼠标停留在上面发生旋转效果" class="headerlink" title="把侧边栏头像变成圆形，并且鼠标停留在上面发生旋转效果"></a>把侧边栏头像变成圆形，并且鼠标停留在上面发生旋转效果</h2><p>修改themes\next\source\css_common\components\sidebar\sidebar-author.styl：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">.site-author-image &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  padding: <span class="variable">$site</span>-author-image-padding;</span><br><span class="line">  max-width: <span class="variable">$site</span>-author-image-width;</span><br><span class="line">  height: <span class="variable">$site</span>-author-image-height;</span><br><span class="line">  border: site-author-image-border-color;</span><br><span class="line">  /* start*/</span><br><span class="line">  border-radius: 50%</span><br><span class="line">  webkit-transition: 1.4s all;</span><br><span class="line">  moz-transition: 1.4s all;</span><br><span class="line">  ms-transition: 1.4s all;</span><br><span class="line">  transition: 1.4s all;</span><br><span class="line">  /* end */</span><br><span class="line">&#125;</span><br><span class="line">/* start */</span><br><span class="line">.site-author-image:hover &#123;</span><br><span class="line">  background-color: <span class="comment">#55DAE1;</span></span><br><span class="line">  webkit-transform: rotate(360deg) scale(1.1);</span><br><span class="line">  moz-transform: rotate(360deg) scale(1.1);</span><br><span class="line">  ms-transform: rotate(360deg) scale(1.1);</span><br><span class="line">  transform: rotate(360deg) scale(1.1);</span><br><span class="line">&#125;</span><br><span class="line">/* end */</span><br></pre></td></tr></table></figure></p>
+<h2 id="添加音乐"><a href="#添加音乐" class="headerlink" title="添加音乐"></a>添加音乐</h2><p>去往网易云音乐搜索喜欢的音乐，点击生成外链播放器，复制代码直接放到博文末尾即可，height设为0可隐藏播放器，但仍然可以播放音乐，auto设成0可手动播放，默认是1自动播放，可把代码放到themes/next/layout/_custom/sidebar.swig文件里，播放器会显示在站点预览中</p>
+<p>具体功能可参考<a href="https://blog.csdn.net/com_ma/article/details/76039859" target="_blank" rel="noopener">https://blog.csdn.net/com_ma/article/details/76039859</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.cduyzh.com/hexo-settings-2/" target="_blank" rel="noopener">http://www.cduyzh.com/hexo-settings-2/</a><br><a href="http://www.cduyzh.com/hexo-settings-4/" target="_blank" rel="noopener">http://www.cduyzh.com/hexo-settings-4/</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/06/hexo-next-2/" rel="next" title="使用Hexo+Github搭建属于自己的博客（Next主题基础配置）">
+                <i class="fa fa-chevron-left"></i> 使用Hexo+Github搭建属于自己的博客（Next主题基础配置）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/06/hexo-next-4/" rel="prev" title="使用Hexo+Github搭建属于自己的博客（CSS样式自定义）">
+                使用Hexo+Github搭建属于自己的博客（CSS样式自定义） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/head.jpg"
+                alt="YuuiChung's Blog" />
+            
+              <p class="site-author-name" itemprop="name">YuuiChung's Blog</p>
+              <p class="site-description motion-element" itemprop="description">Persistence, Confidence, Patience</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/YuuiChung" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:mr_chung@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=103301&auto=0&height=66"></iframe>
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#理解文章和页面"><span class="nav-number">2.</span> <span class="nav-text">理解文章和页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章阅读次数的统计深入讲解"><span class="nav-number">3.</span> <span class="nav-text">文章阅读次数的统计深入讲解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#leanCloud来实现阅读统计"><span class="nav-number">3.1.</span> <span class="nav-text">leanCloud来实现阅读统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建一个应用"><span class="nav-number">3.1.1.</span> <span class="nav-text">创建一个应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取AppID和AppKey"><span class="nav-number">3.1.2.</span> <span class="nav-text">获取AppID和AppKey</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置主题配置文件"><span class="nav-number">3.1.3.</span> <span class="nav-text">设置主题配置文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#酷炫的博客背景"><span class="nav-number">4.</span> <span class="nav-text">酷炫的博客背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加Fork-me-on-GitHub"><span class="nav-number">5.</span> <span class="nav-text">添加Fork me on GitHub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把侧边栏头像变成圆形，并且鼠标停留在上面发生旋转效果"><span class="nav-number">6.</span> <span class="nav-text">把侧边栏头像变成圆形，并且鼠标停留在上面发生旋转效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加音乐"><span class="nav-number">7.</span> <span class="nav-text">添加音乐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YuuiChung's Blog</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("lXHXSBMcAQwbwaTN2rBF0j3p-gzGzoHsz", "kYDFitxzFqeDormFIK0jJ3Su");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
